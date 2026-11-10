@@ -1,0 +1,237 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Thunderstorm Gloomy Sky Gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050705"/>
+      <stop offset="35%" stop-color="#0b100c"/>
+      <stop offset="75%" stop-color="#141c14"/>
+      <stop offset="100%" stop-color="#090d09"/>
+    </linearGradient>
+
+    <!-- Cloud & Mist Gradients -->
+    <linearGradient id="stormCloud1" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#0d140e" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#182419" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="stormCloud2" x1="100%" y1="0%" x2="0%" y2="80%">
+      <stop offset="0%" stop-color="#121a13" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#080c08" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Building Gradients -->
+    <linearGradient id="bldgFar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e0a"/>
+      <stop offset="100%" stop-color="#151e15"/>
+    </linearGradient>
+
+    <linearGradient id="bldgMid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0e140e"/>
+      <stop offset="100%" stop-color="#1a251a"/>
+    </linearGradient>
+
+    <linearGradient id="bldgNear" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#131b13"/>
+      <stop offset="100%" stop-color="#080c08"/>
+    </linearGradient>
+
+    <!-- Moss / Ivy Gradients -->
+    <linearGradient id="mossGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3d5434" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#1a2416" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- Mist Band -->
+    <linearGradient id="mistBand" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#182419" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#223323" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#101810" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky Base -->
+  <rect width="1920" height="1080" fill="url(#skyGrad)"/>
+
+  <!-- Heavy Storm Clouds Rolling Across Upper Sky -->
+  <path d="M -100 120 Q 300 -40 700 80 T 1500 40 T 2100 110 L 2100 -50 L -100 -50 Z" fill="url(#stormCloud1)"/>
+  <path d="M 0 240 Q 450 80 900 200 T 1800 140 T 2100 220 L 2100 -50 L 0 -50 Z" fill="url(#stormCloud2)"/>
+
+  <!-- ========================================================================
+       LAYER 1: DISTANT FRACTURED SKYSCRAPERS & DECAYING TOWERS
+       ======================================================================== -->
+  <g fill="url(#bldgFar)" opacity="0.65">
+    <!-- Leaning Tower Left with broken top -->
+    <polygon points="100,720 140,190 220,180 210,130 260,130 280,210 300,210 320,720"/>
+    <polygon points="330,720 330,280 360,260 380,290 410,250 430,280 430,720"/>
+    
+    <!-- Fractured Center Megatower (Shattered Crown) -->
+    <polygon points="600,750 600,120 650,80 670,110 680,60 690,100 740,150 750,750"/>
+    <!-- Hollow window slits -->
+    <g fill="#040604" opacity="0.8">
+      <rect x="630" y="160" width="8" height="14"/><rect x="650" y="160" width="8" height="14"/><rect x="670" y="160" width="8" height="14"/>
+      <rect x="630" y="190" width="8" height="14"/><rect x="650" y="190" width="8" height="14"/><rect x="670" y="190" width="8" height="14"/>
+      <rect x="630" y="220" width="8" height="14"/><rect x="670" y="220" width="8" height="14"/>
+    </g>
+
+    <!-- Broad Decaying Complex -->
+    <polygon points="780,750 780,220 900,200 920,250 970,250 990,750"/>
+    <!-- Angled Ruined Tower -->
+    <polygon points="1100,750 1120,180 1210,200 1240,750"/>
+    <!-- Twin Towers Right -->
+    <polygon points="1320,780 1320,250 1380,240 1410,310 1430,780"/>
+    <polygon points="1450,780 1450,160 1490,150 1520,190 1560,180 1570,780"/>
+    <!-- Far Right Spire -->
+    <polygon points="1660,800 1660,270 1740,250 1800,290 1830,800"/>
+  </g>
+
+  <!-- Distant Storm Mist Drift -->
+  <rect y="320" width="1920" height="260" fill="url(#mistBand)"/>
+
+  <!-- ========================================================================
+       LAYER 2: MIDGROUND ABANDONED RUINED BUILDINGS & OVERPASS
+       ======================================================================== -->
+  <g fill="url(#bldgMid)">
+    <!-- Building Left: Collapsed Floors & Hollow Windows -->
+    <polygon points="0,880 0,340 90,320 110,370 160,350 190,400 240,390 260,880"/>
+    <!-- Dark hollow window sockets -->
+    <g fill="#050805" opacity="0.85">
+      <rect x="25" y="380" width="18" height="26"/><rect x="55" y="380" width="18" height="26"/><rect x="85" y="400" width="18" height="26"/>
+      <rect x="25" y="430" width="18" height="26"/><rect x="55" y="430" width="18" height="26"/><rect x="115" y="440" width="22" height="30"/>
+      <rect x="25" y="480" width="18" height="26"/><rect x="55" y="480" width="18" height="26"/><rect x="85" y="480" width="18" height="26"/>
+      <rect x="25" y="530" width="18" height="26"/><rect x="145" y="510" width="22" height="30"/>
+    </g>
+
+    <!-- Hanging Ivy / Kudzu down Left Building -->
+    <path d="M 50 360 Q 60 440 45 520 Q 65 600 50 670" stroke="url(#mossGrad)" stroke-width="10" fill="none"/>
+    <path d="M 130 380 Q 145 470 125 550 Q 140 620 130 690" stroke="url(#mossGrad)" stroke-width="14" fill="none"/>
+
+    <!-- Midground Collapsed Skyscraper Center-Left -->
+    <polygon points="440,900 450,290 520,280 540,330 590,310 620,390 650,900"/>
+    <g fill="#050805" opacity="0.85">
+      <rect x="475" y="330" width="16" height="24"/><rect x="505" y="330" width="16" height="24"/>
+      <rect x="475" y="370" width="16" height="24"/><rect x="560" y="360" width="18" height="26"/>
+      <rect x="505" y="415" width="16" height="24"/><rect x="560" y="405" width="18" height="26"/>
+      <rect x="475" y="460" width="16" height="24"/><rect x="560" y="455" width="18" height="26"/>
+      <rect x="475" y="510" width="16" height="24"/><rect x="505" y="510" width="16" height="24"/>
+    </g>
+
+    <!-- Clinging Moss & Vines down Center Skyscraper -->
+    <path d="M 460 310 Q 475 410 455 510 Q 475 610 460 700" stroke="url(#mossGrad)" stroke-width="12" fill="none"/>
+    <path d="M 535 300 Q 550 410 530 510 Q 545 610 530 710" stroke="url(#mossGrad)" stroke-width="16" fill="none"/>
+    <path d="M 605 340 Q 615 440 595 530" stroke="url(#mossGrad)" stroke-width="9" fill="none"/>
+
+    <!-- Midground Ruined Complex Right -->
+    <polygon points="1180,920 1180,320 1260,300 1290,350 1350,330 1400,400 1430,920"/>
+    <g fill="#050805" opacity="0.85">
+      <rect x="1210" y="360" width="18" height="26"/><rect x="1240" y="360" width="18" height="26"/>
+      <rect x="1310" y="380" width="18" height="26"/><rect x="1210" y="410" width="18" height="26"/>
+      <rect x="1310" y="430" width="18" height="26"/><rect x="1240" y="460" width="18" height="26"/>
+      <rect x="1210" y="510" width="18" height="26"/><rect x="1310" y="500" width="18" height="26"/>
+    </g>
+
+    <!-- Thick Vines Right Building -->
+    <path d="M 1270 320 Q 1285 430 1265 540 Q 1280 640 1265 720" stroke="url(#mossGrad)" stroke-width="14" fill="none"/>
+    <path d="M 1340 350 Q 1355 450 1335 550" stroke="url(#mossGrad)" stroke-width="9" fill="none"/>
+  </g>
+
+  <!-- Trees & Shrubs Sprouting on Rooftops & Broken Slabs -->
+  <g fill="#1f2c1b" opacity="0.95">
+    <!-- Tree on left building roof -->
+    <ellipse cx="140" cy="340" rx="38" ry="26"/>
+    <ellipse cx="180" cy="360" rx="32" ry="22"/>
+    <ellipse cx="105" cy="365" rx="28" ry="19"/>
+    <!-- Tree on center building roof -->
+    <ellipse cx="510" cy="280" rx="38" ry="24"/>
+    <ellipse cx="580" cy="310" rx="30" ry="20"/>
+    <!-- Tree on right building roof -->
+    <ellipse cx="1280" cy="305" rx="42" ry="26"/>
+    <ellipse cx="1340" cy="330" rx="32" ry="22"/>
+  </g>
+
+  <!-- Mid-level Rain Mist Layer -->
+  <rect y="480" width="1920" height="350" fill="url(#mistBand)"/>
+
+  <!-- ========================================================================
+       LAYER 3: COLLAPSED OVERPASS & OVERGROWN TERRAIN
+       ======================================================================== -->
+  <g fill="url(#bldgNear)">
+    <!-- Broken Elevated Overpass Left with Rebar Protrusions -->
+    <polygon points="0,960 0,650 360,680 380,740 0,740 0,960"/>
+    <rect x="250" y="720" width="50" height="240" fill="#0b100b"/>
+    <!-- Concrete cracks & rebar spikes -->
+    <line x1="360" y1="680" x2="385" y2="675" stroke="#4a5a48" stroke-width="3"/>
+    <line x1="365" y1="695" x2="395" y2="692" stroke="#4a5a48" stroke-width="2.5"/>
+    <line x1="362" y1="710" x2="388" y2="712" stroke="#4a5a48" stroke-width="3"/>
+
+    <!-- Hanging Moss under Overpass -->
+    <path d="M 80 720 L 80 840" stroke="#3d5434" stroke-width="6" opacity="0.85"/>
+    <path d="M 150 725 L 150 870" stroke="#3d5434" stroke-width="8" opacity="0.85"/>
+    <path d="M 220 730 L 220 850" stroke="#3d5434" stroke-width="5" opacity="0.8"/>
+
+    <!-- Overgrown Undulating Earth Ground Contour -->
+    <path d="M 0 1080 L 0 850 Q 480 810 960 860 T 1920 830 L 1920 1080 Z" fill="#090d09"/>
+  </g>
+
+  <!-- ========================================================================
+       LAYER 4: FOREGROUND DENSE OVERGROWN WILD TALL GRASS & FERNS
+       (Dense prairie grass blades covering the bottom landscape)
+       ======================================================================== -->
+  <g fill="#141e13" stroke="#223321" stroke-width="2">
+    <!-- Left Grass Blades -->
+    <path d="M 10 1080 Q 20 920 50 860 Q 30 940 20 1080 Z"/>
+    <path d="M 25 1080 Q 45 900 85 840 Q 60 930 35 1080 Z"/>
+    <path d="M 50 1080 Q 80 910 120 850 Q 90 940 60 1080 Z"/>
+    <path d="M 75 1080 Q 55 930 30 890 Q 60 950 85 1080 Z"/>
+    <path d="M 95 1080 Q 125 900 165 830 Q 135 930 105 1080 Z"/>
+    <path d="M 125 1080 Q 150 920 185 870 Q 155 950 135 1080 Z"/>
+
+    <!-- Cluster 2 -->
+    <path d="M 165 1080 Q 190 910 235 850 Q 205 940 180 1080 Z"/>
+    <path d="M 195 1080 Q 230 890 275 820 Q 245 920 210 1080 Z"/>
+    <path d="M 235 1080 Q 210 930 180 880 Q 220 940 250 1080 Z"/>
+    <path d="M 270 1080 Q 305 900 350 840 Q 315 930 285 1080 Z"/>
+    <path d="M 310 1080 Q 345 920 390 860 Q 355 950 325 1080 Z"/>
+
+    <!-- Center-Left Blades -->
+    <path d="M 380 1080 Q 415 910 460 860 Q 425 940 395 1080 Z"/>
+    <path d="M 425 1080 Q 465 890 515 820 Q 475 920 440 1080 Z"/>
+    <path d="M 465 1080 Q 440 930 410 880 Q 450 950 480 1080 Z"/>
+    <path d="M 505 1080 Q 545 900 595 840 Q 555 930 520 1080 Z"/>
+    <path d="M 550 1080 Q 590 890 645 830 Q 605 920 565 1080 Z"/>
+
+    <!-- Center Blades -->
+    <path d="M 680 1080 Q 720 910 770 850 Q 730 940 695 1080 Z"/>
+    <path d="M 725 1080 Q 770 890 825 820 Q 780 920 740 1080 Z"/>
+    <path d="M 770 1080 Q 745 930 710 880 Q 755 940 785 1080 Z"/>
+    <path d="M 820 1080 Q 865 900 920 840 Q 875 930 835 1080 Z"/>
+    <path d="M 870 1080 Q 915 890 970 820 Q 925 920 885 1080 Z"/>
+
+    <!-- Center-Right Blades -->
+    <path d="M 1020 1080 Q 1065 910 1120 840 Q 1075 930 1035 1080 Z"/>
+    <path d="M 1075 1080 Q 1120 890 1180 820 Q 1130 920 1090 1080 Z"/>
+    <path d="M 1130 1080 Q 1105 930 1070 880 Q 1115 940 1145 1080 Z"/>
+    <path d="M 1180 1080 Q 1225 900 1280 840 Q 1235 930 1195 1080 Z"/>
+    <path d="M 1235 1080 Q 1280 890 1340 820 Q 1295 920 1250 1080 Z"/>
+
+    <!-- Right Blades -->
+    <path d="M 1370 1080 Q 1415 910 1470 840 Q 1425 930 1385 1080 Z"/>
+    <path d="M 1425 1080 Q 1470 890 1530 820 Q 1485 920 1440 1080 Z"/>
+    <path d="M 1480 1080 Q 1455 930 1420 880 Q 1465 940 1495 1080 Z"/>
+    <path d="M 1535 1080 Q 1580 900 1635 840 Q 1590 930 1550 1080 Z"/>
+    <path d="M 1595 1080 Q 1645 880 1705 810 Q 1660 920 1610 1080 Z"/>
+    <path d="M 1660 1080 Q 1710 900 1770 830 Q 1725 930 1675 1080 Z"/>
+    <path d="M 1725 1080 Q 1775 890 1840 820 Q 1795 920 1740 1080 Z"/>
+    <path d="M 1790 1080 Q 1840 900 1905 830 Q 1860 930 1805 1080 Z"/>
+    <path d="M 1850 1080 Q 1880 920 1920 870 Q 1890 940 1865 1080 Z"/>
+  </g>
+
+  <!-- Foreground Fern Fronds & Moss Highlights -->
+  <g fill="#283a25" opacity="0.8">
+    <path d="M 35 1080 Q 70 960 110 910 Q 85 980 50 1080 Z"/>
+    <path d="M 180 1080 Q 215 950 260 890 Q 230 980 195 1080 Z"/>
+    <path d="M 440 1080 Q 475 960 520 900 Q 490 980 455 1080 Z"/>
+    <path d="M 740 1080 Q 780 950 830 890 Q 795 980 755 1080 Z"/>
+    <path d="M 1090 1080 Q 1130 940 1185 880 Q 1145 980 1105 1080 Z"/>
+    <path d="M 1450 1080 Q 1490 940 1545 880 Q 1505 980 1465 1080 Z"/>
+    <path d="M 1710 1080 Q 1755 950 1810 890 Q 1770 980 1725 1080 Z"/>
+  </g>
+</svg>
