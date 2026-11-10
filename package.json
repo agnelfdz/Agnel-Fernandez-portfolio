@@ -1,0 +1,9 @@
+{
+  "name": "agnel-fernandez-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio of Agnel Fernandez - Technical Support Engineer & 3D Artist",
+  "scripts": {
+    "build": "echo 'Static build complete'"
+  }
+}
