@@ -12,6 +12,13 @@
 </head>
 <body>
 
+  <!-- Futuristic Cyber Reticle Cursor -->
+  <div id="cyber-reticle" aria-hidden="true">
+    <div class="reticle-dot"></div>
+    <div class="reticle-ring"></div>
+    <div class="reticle-coords">[<span id="reticle-x">0</span>,<span id="reticle-y">0</span>]</div>
+  </div>
+
   <!-- Scenic Background: 4K Futuristic Cyberpunk Night City -->
   <div class="scenic-background" aria-hidden="true"></div>
 
@@ -130,6 +137,38 @@
               </div>
             </div>
 
+            <!-- Interactive Cyber Deck Telemetry Console -->
+            <div class="cyber-deck-console">
+              <div class="deck-header">
+                <span class="deck-title"><span class="blink-dot"></span> NEURAL_LINK // DIAGNOSTIC_DECK v2.077</span>
+                <span class="deck-barcode">||| | |||| | ||| [SEC_AUTH]</span>
+              </div>
+              <div class="deck-grid">
+                <div class="deck-node">
+                  <span class="node-lbl">CPU // NEURAL THREADS</span>
+                  <span class="node-val cyan-glow">98.4% OPTIMAL</span>
+                  <div class="node-meter"><div class="meter-bar" style="width: 98%;"></div></div>
+                </div>
+                <div class="deck-node">
+                  <span class="node-lbl">MUTHOOT IT SUBNET</span>
+                  <span class="node-val yellow-glow">ONLINE [ENCRYPTED]</span>
+                  <span class="node-sub">IP: 10.240.8.77 // PING: 3ms</span>
+                </div>
+                <div class="deck-node">
+                  <span class="node-lbl">MEMORY BUFFER</span>
+                  <span class="node-val green-glow">64TB QUANTUM L2</span>
+                  <span class="node-sub">BUFFER_LOAD: 24.8% // CLEAN</span>
+                </div>
+                <div class="deck-node">
+                  <span class="node-lbl">AUDIO FREQ SPECTRUM</span>
+                  <div class="eq-visualizer">
+                    <span class="eq-bar"></span><span class="eq-bar"></span><span class="eq-bar"></span><span class="eq-bar"></span>
+                    <span class="eq-bar"></span><span class="eq-bar"></span><span class="eq-bar"></span><span class="eq-bar"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <!-- Action Buttons -->
             <div class="hero-actions">
               <a href="#experience" class="btn-primary">
@@ -159,7 +198,16 @@
           <div class="hero-right-col">
             
             <div class="hero-field-profile">
-
+              <span class="hex-bolt top-left"></span>
+              <span class="hex-bolt top-right"></span>
+              <span class="hex-bolt bottom-left"></span>
+              <span class="hex-bolt bottom-right"></span>
+              
+              <div class="card-tech-strip">
+                <span class="tech-id">// NETRUNNER_ID: AF-7729</span>
+                <span class="barcode-graphic">|||| ||| || ||||</span>
+                <span class="led-cluster"><span class="led green"></span><span class="led cyan"></span><span class="led yellow"></span></span>
+              </div>
               
               <div class="profile-top-row">
                 <div class="profile-avatar-frame">
@@ -235,8 +283,16 @@
           
           <!-- Journal Card -->
           <div class="journal-card">
+            <span class="hex-bolt top-left"></span>
+            <span class="hex-bolt top-right"></span>
+            <span class="hex-bolt bottom-left"></span>
+            <span class="hex-bolt bottom-right"></span>
 
-            <div class="journal-tape"></div>
+            <div class="card-tech-strip">
+              <span class="tech-id">// DOSSIER_LOG: SEC-01</span>
+              <span class="barcode-graphic">|||| ||| ||| ||</span>
+              <span class="led-cluster"><span class="led green"></span><span class="led cyan"></span></span>
+            </div>
             
             <div class="journal-quote">
               &ldquo;Passionate and hardworking candidate seeking a challenging opportunity where I can best utilize my skills for the organization's success.&rdquo;
@@ -335,7 +391,16 @@
           
           <!-- Experience 1 (PRIMARY): Technical Support Engineer at Muthoot Mcred Limited -->
           <div class="exp-card primary-exp">
-
+            <span class="hex-bolt top-left"></span>
+            <span class="hex-bolt top-right"></span>
+            <span class="hex-bolt bottom-left"></span>
+            <span class="hex-bolt bottom-right"></span>
+            
+            <div class="card-tech-strip">
+              <span class="tech-id">// ENTERPRISE_NODE_01 // MUTHOOT_MCRED</span>
+              <span class="barcode-graphic">|||| |||| ||| ||</span>
+              <span class="led-cluster"><span class="led green"></span><span class="led yellow"></span></span>
+            </div>
             
             <div class="exp-header">
               <div>
@@ -363,7 +428,16 @@
 
           <!-- Experience 2: 3D Artist at C Design -->
           <div class="exp-card">
-
+            <span class="hex-bolt top-left"></span>
+            <span class="hex-bolt top-right"></span>
+            <span class="hex-bolt bottom-left"></span>
+            <span class="hex-bolt bottom-right"></span>
+            
+            <div class="card-tech-strip">
+              <span class="tech-id">// DIGITAL_STUDIO_02 // C_DESIGN_THRISSUR</span>
+              <span class="barcode-graphic">||| |||| |||| |</span>
+              <span class="led-cluster"><span class="led cyan"></span><span class="led magenta"></span></span>
+            </div>
             
             <div class="exp-header">
               <div>
@@ -417,6 +491,16 @@
           
           <!-- Left Column: Core Skill Levels -->
           <div class="skills-journal-box">
+            <span class="hex-bolt top-left"></span>
+            <span class="hex-bolt top-right"></span>
+            <span class="hex-bolt bottom-left"></span>
+            <span class="hex-bolt bottom-right"></span>
+            
+            <div class="card-tech-strip">
+              <span class="tech-id">// PROTOCOL_CAPABILITIES: SEC-03</span>
+              <span class="barcode-graphic">|||| ||| |||| ||</span>
+              <span class="led-cluster"><span class="led cyan"></span><span class="led yellow"></span></span>
+            </div>
 
             <h3 class="box-heading">CORE TECHNICAL CAPABILITIES</h3>
             
@@ -474,6 +558,10 @@
           <div class="lang-tools-col">
             
             <div class="language-card">
+              <span class="hex-bolt top-left"></span>
+              <span class="hex-bolt top-right"></span>
+              <span class="hex-bolt bottom-left"></span>
+              <span class="hex-bolt bottom-right"></span>
 
               <h3 class="box-heading">COMMUNICATION LANGUAGES</h3>
               
@@ -498,6 +586,10 @@
             </div>
 
             <div class="tools-card">
+              <span class="hex-bolt top-left"></span>
+              <span class="hex-bolt top-right"></span>
+              <span class="hex-bolt bottom-left"></span>
+              <span class="hex-bolt bottom-right"></span>
 
               <h3 class="box-heading">TECHNICAL SUPPORT TOOLKIT</h3>
               <div class="tools-grid">
@@ -534,6 +626,10 @@
           
           <!-- Education 1: BSc Computer Science -->
           <div class="edu-journal-card">
+            <span class="hex-bolt top-left"></span>
+            <span class="hex-bolt top-right"></span>
+            <span class="hex-bolt bottom-left"></span>
+            <span class="hex-bolt bottom-right"></span>
 
             <div class="edu-dates">14/06/2019 &ndash; 10/09/2021 &bull; ERNAKULAM, INDIA</div>
             <h3 class="edu-degree">BSc COMPUTER SCIENCE</h3>
@@ -549,6 +645,10 @@
 
           <!-- Education 2: Diploma in Industrial Electrical Engineering -->
           <div class="edu-journal-card">
+            <span class="hex-bolt top-left"></span>
+            <span class="hex-bolt top-right"></span>
+            <span class="hex-bolt bottom-left"></span>
+            <span class="hex-bolt bottom-right"></span>
 
             <div class="edu-dates">16/09/2017 &ndash; 07/10/2018 &bull; ERNAKULAM, INDIA</div>
             <h3 class="edu-degree">DIPLOMA IN INDUSTRIAL ELECTRICAL ENGINEERING</h3>
@@ -581,6 +681,11 @@
         </div>
 
         <div class="artstation-spotlight-card">
+          <span class="hex-bolt top-left"></span>
+          <span class="hex-bolt top-right"></span>
+          <span class="hex-bolt bottom-left"></span>
+          <span class="hex-bolt bottom-right"></span>
+
           <div class="spotlight-text">
             <h3>ARTSTATION // AGNEL_FERNANDEZ</h3>
             <p>
@@ -637,6 +742,16 @@
           
           <!-- Left: Verified Contact Information -->
           <div class="contact-info-card">
+            <span class="hex-bolt top-left"></span>
+            <span class="hex-bolt top-right"></span>
+            <span class="hex-bolt bottom-left"></span>
+            <span class="hex-bolt bottom-right"></span>
+
+            <div class="card-tech-strip">
+              <span class="tech-id">// COMMS_ENCRYPTION: 4096_BIT</span>
+              <span class="barcode-graphic">|||| |||| |||</span>
+              <span class="led-cluster"><span class="led green"></span><span class="led cyan"></span></span>
+            </div>
 
             <p class="contact-lead">
               Currently available for full-time <strong>Technical Support Engineer</strong> roles, systems engineering positions, and specialized 3D modeling contracts. Feel free to contact me directly through any of the channels below.
@@ -705,6 +820,10 @@
 
           <!-- Right: Natural Contact Form -->
           <div class="contact-form-card">
+            <span class="hex-bolt top-left"></span>
+            <span class="hex-bolt top-right"></span>
+            <span class="hex-bolt bottom-left"></span>
+            <span class="hex-bolt bottom-right"></span>
 
             <h3 class="form-title">SEND A MESSAGE</h3>
             

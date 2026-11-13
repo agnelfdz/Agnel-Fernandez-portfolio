@@ -1,7 +1,8 @@
 /**
  * Cyberpunk 2077 // Procedural Web Audio API Sound Engine
  * Synthesizes high-tech sci-fi HUD audio effects:
- * - Cyber Boot Sequence (Dual-oscillator Blade Runner style synth chord)
+ * - Blade Runner Cinematic Ambient Night City Drone
+ * - Cyber Boot Sequence (Dual-oscillator CS-80 style synth chord)
  * - Tactile HUD Hover Chirp (High-frequency cyber click)
  * - Interactive Select / Decrypt (Frequency modulated pulse)
  * - Encrypted Transmission (Data burst on form submit)
@@ -13,6 +14,7 @@ class CyberAudio {
     this.enabled = false;
     this.volume = 0.22;
     this.initDone = false;
+    this.ambientNodes = null;
   }
 
   init() {
@@ -40,6 +42,9 @@ class CyberAudio {
     this.enabled = !this.enabled;
     if (this.enabled) {
       this.playBoot();
+      this.startAmbientDrone();
+    } else {
+      this.stopAmbientDrone();
     }
     return this.enabled;
   }
@@ -79,6 +84,60 @@ class CyberAudio {
     } catch (e) {}
   }
 
+  // Low-frequency atmospheric cyberpunk ambient synth drone
+  startAmbientDrone() {
+    if (!this.ctx || this.ambientNodes) return;
+    try {
+      const now = this.ctx.currentTime;
+
+      const osc1 = this.ctx.createOscillator();
+      const osc2 = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      const filter = this.ctx.createBiquadFilter();
+
+      // Deep sub-harmonics
+      osc1.type = 'sawtooth';
+      osc1.frequency.setValueAtTime(65.41, now); // C2
+      osc2.type = 'sine';
+      osc2.frequency.setValueAtTime(65.8, now); // slight detune beat frequency
+
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(140, now);
+
+      gain.gain.setValueAtTime(0.001, now);
+      gain.gain.linearRampToValueAtTime(this.volume * 0.08, now + 2); // very soft warm bed
+
+      osc1.connect(filter);
+      osc2.connect(filter);
+      filter.connect(gain);
+      gain.connect(this.ctx.destination);
+
+      osc1.start(now);
+      osc2.start(now);
+
+      this.ambientNodes = { osc1, osc2, gain };
+    } catch (e) {}
+  }
+
+  stopAmbientDrone() {
+    if (!this.ambientNodes || !this.ctx) return;
+    try {
+      const now = this.ctx.currentTime;
+      this.ambientNodes.gain.gain.linearRampToValueAtTime(0.0001, now + 0.8);
+      setTimeout(() => {
+        if (this.ambientNodes) {
+          try {
+            this.ambientNodes.osc1.stop();
+            this.ambientNodes.osc2.stop();
+          } catch (e) {}
+          this.ambientNodes = null;
+        }
+      }, 850);
+    } catch (e) {
+      this.ambientNodes = null;
+    }
+  }
+
   // Futuristic tactile chirp on hovering buttons/links
   playHover() {
     if (!this.enabled || !this.ctx) return;
@@ -92,7 +151,7 @@ class CyberAudio {
       osc.frequency.setValueAtTime(1400, now);
       osc.frequency.exponentialRampToValueAtTime(2200, now + 0.025);
 
-      gain.gain.setValueAtTime(this.volume * 0.1, now);
+      gain.gain.setValueAtTime(this.volume * 0.09, now);
       gain.gain.exponentialRampToValueAtTime(0.001, now + 0.025);
 
       osc.connect(gain);
